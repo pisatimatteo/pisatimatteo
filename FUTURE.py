@@ -120,6 +120,8 @@ from scipy import optimize
 threshold_VIX = 20
 threshold_Over = 0.002
 #rranges = (slice(20, 60, 10), slice(0, 0.5, 0.01) )
+
+# optimization branch 
 args = (dt, ts, ret, over, vix, Sig_8, Sig_7, Enter, RESULTS, threshold_Over, threshold_VIX, cost)
 GRID = optim_grid_1D(Relative_Strategy_njit, trading_days, risk_free_ratio, min_param, max_param, increment, STRATEGY, *args)
 
